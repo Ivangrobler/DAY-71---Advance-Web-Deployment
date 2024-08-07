@@ -10,22 +10,9 @@ from sqlalchemy import Integer, String, Text
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
+import os
 # Optional: add contact me email functionality (Day 60)
 # import smtplib
-
-
-'''
-Make sure the required packages are installed: 
-Open the Terminal in PyCharm (bottom left). 
-
-On Windows type:
-python -m pip install -r requirements.txt
-
-On MacOS type:
-pip3 install -r requirements.txt
-
-This will install the packages from the requirements.txt for this project.
-'''
 
 
 app = Flask(__name__)
@@ -299,4 +286,4 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    app.run(debug=False, port=5001)
